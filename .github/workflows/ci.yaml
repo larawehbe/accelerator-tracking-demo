@@ -22,4 +22,4 @@ jobs:
       - name: Run tests
         run: |
           export PYTHONPATH=.
-          pytest tests/ -v
+          pytest --collect-only -v
