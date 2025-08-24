@@ -9,6 +9,7 @@ __pycache__
 *.ckpt
 *.log
 mlflow.db
-/data
+
 
 newenv/
+/data
