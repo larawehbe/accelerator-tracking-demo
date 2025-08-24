@@ -33,7 +33,3 @@ def train(req: TrainRequest):
     )
     return {"tracking_uri": mlflow.get_tracking_uri(), "results": results}
 
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app)
