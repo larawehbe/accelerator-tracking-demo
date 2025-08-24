@@ -5,10 +5,15 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
-# 
+#
+
+import dagshub
+dagshub_owner = "larawehbe"
+dagshub_repo = "accelerator-tracking-demo"
+dagshub.init(repo_owner=dagshub_owner, repo_name=dagshub_repo, mlflow=True)
 # 1) Point to your tracking server + experiment
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
-mlflow.set_experiment("mlops-course")
+# mlflow.set_tracking_uri("http://127.0.0.1:5000")
+# mlflow.set_experiment("mlops-course")
 
 X, y = load_iris(return_X_y=True)
 X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.2, random_state=42)
