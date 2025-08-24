@@ -24,6 +24,7 @@ def health():
 
 @app.post("/train", response_model=TrainResponse)
 def train(req: TrainRequest):
+    import mlflow
     results = run_training(
         n_values=req.n_values,
         max_depth=req.max_depth,
