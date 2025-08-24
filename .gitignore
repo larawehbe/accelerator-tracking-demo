@@ -13,3 +13,4 @@ mlflow.db
 
 newenv/
 /data
+.env
