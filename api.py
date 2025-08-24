@@ -18,13 +18,13 @@ class TrainResponse(BaseModel):
     tracking_uri: str
     results: list
 
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
 @app.post("/train", response_model=TrainResponse)
 def train(req: TrainRequest):
-    import mlflow
     results = run_training(
         n_values=req.n_values,
         max_depth=req.max_depth,
