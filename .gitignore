@@ -1,0 +1,11 @@
+venv
+artifacts
+__pycache__
+.ipynb_checkpoints
+*.pyc
+.DS_Store
+*.pkl
+*.h5
+*.ckpt
+*.log
+mlflow.db
