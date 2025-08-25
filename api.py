@@ -34,3 +34,7 @@ def train(req: TrainRequest):
     )
     return {"tracking_uri": mlflow.get_tracking_uri(), "results": results}
 
+
+@app.get("/")
+def main():
+    return {"Hello" : "world"}
